@@ -1,0 +1,31 @@
+footer{
+    background-color: #dc3545;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .titulo{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a{
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+footer p a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer p{
+    max-width: 350px;
+    margin-bottom: 16px;
+}
