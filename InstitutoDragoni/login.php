@@ -5,7 +5,7 @@ include ("header.php");
     <div class="row">
         <div class="col mt-5">
             <center>
-                <h1>Cadastrar novo usuário</h1>
+                <h1>Efetuar login</h1>
             </center>
             <form action="models/salvar-usuario.php" method="POST">
                 <input type="hidden" name="acao" value="cadastrar">
@@ -18,11 +18,13 @@ include ("header.php");
                     <input type="password" name="senha" class="form-control">
                 </div>
 
+                
                 <div class="mb-3">
-
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-
-                </div>
+           
+            <form action='models/salvar-usuario.php' method='POST'> <input type='hidden' name='acao' value='logar'>
+                <button type='submit' class='btn btn-primary'>Logar</button>
+            </form>
+            </div>
                 
             </form>
         </div>

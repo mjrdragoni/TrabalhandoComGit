@@ -21,20 +21,21 @@ switch (@$_POST["acao"]) {
 
     case 'logar';
     $login = $_POST['login'];
-    $senha = MD5($_POST['senha']);
-        $verifica = "SELECT * FROM usuarios WHERE (usuario = '$login' AND senha = '$senha')";
+    $senha = $_POST['senha'];
+        $verifica = "SELECT * FROM usuarios WHERE (usuario = '$login' AND senha = MD5('$senha'))";
         $res = $conn->query($verifica);
         $qtd = $res->num_rows;
         if ($qtd > 0) {
-            print "<script language='javascript'>alert('Usuário e/ou senha incorreta!');</script>
-            <meta http-equiv='refresh' content='0;url=../novo-usuario.php'>"; 
+            setcookie("login", $login);
+            header("Location: ../index.php");
            
         }
         else{
-            setcookie("login", $login);
-            header("Location: ../index.php");
+          
+              print "<script language='javascript'>alert('Usuário e/ou senha incorreta!');</script>
+            "; 
         }
-        break;
+       
         
 
 

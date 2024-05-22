@@ -34,7 +34,7 @@ include ("controllers/conection.php");
           <a class="nav-link" href="quemsomos.php">Quem somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="novo-usuario.php">Login</a>
+          <a class="nav-link" href="login.php">Login</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="index.php" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -43,7 +43,7 @@ include ("controllers/conection.php");
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="novo-cliente.php">Cadastrar Cliente</a>
-            <a class="dropdown-item" href="listar-cliente.php">Listar clientes</a>
+           
             <div class="dropdown-divider"></div>
           </div>
         </li>
@@ -53,7 +53,7 @@ include ("controllers/conection.php");
             Produtos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="novo-produto.php">Cadastrar Produtos</a>
+           
             <a class="dropdown-item" href="listar-produto.php">Listar Produtos</a>
             <div class="dropdown-divider"></div>
           </div>
