@@ -1,5 +1,12 @@
 <?php
-include ("header.php");
+
+
+	if(isset($_COOKIE['login'])) {
+    include("header-restrita.php");				
+	}		
+	else{   
+    include("header.php");	    		
+		} 	
 ?>
 <div class="container">
     <div class="row">

@@ -20,11 +20,12 @@ switch (@$_POST["acao"]) {
     break;
 
     case 'logar';
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];
+    $login =  mysqli_real_escape_string($conn, trim($_POST['login']));
+	$senha =  mysqli_real_escape_string($conn, trim($_POST['senha']));
         $verifica = "SELECT * FROM usuarios WHERE (usuario = '$login' AND senha = MD5('$senha'))";
         $res = $conn->query($verifica);
         $qtd = $res->num_rows;
+        
         if ($qtd > 0) {
             setcookie("login", $login);
             header("Location: ../index.php");

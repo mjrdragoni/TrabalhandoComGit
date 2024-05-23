@@ -1,17 +1,9 @@
 <?php
-
-
-
 	if(isset($_COOKIE['login'])) {
-    include("header.php");	
-					
-			
+    include("header-restrita.php");				
 	}		
-	else{
-    include("header-restrita.php");
-			
-		
-	    		
+	else{   
+    include("header.php");	    		
 		} 	
 ?>
 <div class="container">

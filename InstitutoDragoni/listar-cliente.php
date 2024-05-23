@@ -1,5 +1,13 @@
 <?php
-include ("header.php");
+
+	if(isset($_COOKIE['login'])) {
+    include("header-restrita.php");				
+	}		
+	else{   
+    include("header.php");	    		
+		} 	
+
+
 $sql = "SELECT * FROM clientes";
 $res = $conn->query($sql);
 $qtd = $res->num_rows;
