@@ -1,12 +1,13 @@
 <?php
+@session_start();
 
-
-	if(isset($_COOKIE['login'])) {
-    include("header-restrita.php");				
-	}		
-	else{   
-    include("header.php");	    		
-		} 	
+if(isset($_SESSION['login']) ){
+include("header-restrita.php");				
+}		
+else{   
+include("header.php");	    		
+    } 	
+?>	
 ?>
 <div class="container">
     <div class="row">

@@ -1,11 +1,14 @@
 <?php
-	if(isset($_COOKIE['login'])) {
+	@session_start();
+
+    if(isset($_SESSION['login']) ){
     include("header-restrita.php");				
 	}		
 	else{   
     include("header.php");	    		
 		} 	
-?>
+?>	    		
+		
 <div class="container">
     <div class="row">
         <div class="col mt-5">

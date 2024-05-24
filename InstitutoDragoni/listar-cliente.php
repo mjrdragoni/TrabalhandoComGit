@@ -1,6 +1,8 @@
 <?php
 
-	if(isset($_COOKIE['login'])) {
+@session_start();
+
+    if(isset($_SESSION['login']) ){
     include("header-restrita.php");				
 	}		
 	else{   
@@ -29,7 +31,7 @@ if ($qtd > 0) {
 
 while ($row = $res->fetch_object()) {
     echo "<tr>
-            <td>$row->codigo_cliente</td> <td>$row->nome</td> <td>$row->edereco</td>
+            <td>$row->codigo_cliente</td> <td>$row->nome</td> <td>$row->endereco</td>
             <td>$row->email</td>
             <td>$row->telefone</td>
             <td>  <a href='../institutodragoni/editar-cliente.php?&id=" . $row->codigo_cliente . "'><button class='btn btn-success'>Editar</button></a></td>

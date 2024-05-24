@@ -6,22 +6,25 @@
          $endereco = $_POST['endereco'];
          $email = $_POST['email'];
          $telefone = $_POST['telefone'];
-         $sql = "INSERT INTO clientes (nome, edereco, email, telefone) VALUES ('$nome', '$endereco', '$email','$telefone')";
+         $sql = "INSERT INTO clientes (nome, endereco, email, telefone) VALUES ('$nome', '$endereco', '$email','$telefone')";
          $res = $conn->query($sql);
-         print '<meta http-equiv="refresh" content="0;url=../index.php">';
+         echo "<script language='javascript'>alert('Cliente cadastrado com suceso!');</script>
+         <meta http-equiv='refresh' content='0;url=../novo-cliente.php'>";
          break;
 
          case 'editar';
          $sql= "UPDATE clientes
-                SET nome='$_POST[nome]', edereco='$_POST[endereco]', email='$_POST[email]', telefone='$_POST[telefone]'
+                SET nome='$_POST[nome]', endereco='$_POST[endereco]', email='$_POST[email]', telefone='$_POST[telefone]'
                 WHERE (codigo_cliente = $_REQUEST[id])";
         $res = $conn->query($sql);
-        print '<meta http-equiv="refresh" content="0;url=../index.php">';
+        echo "<script language='javascript'>alert('Cliente editado com sucesso!');</script>
+        <meta http-equiv='refresh' content='0;url=../listar-cliente.php'>";
          break;
 
          case 'excluir';
          $sql="DELETE from clientes WHERE (codigo_cliente = $_REQUEST[id]) ";
          $res = $conn->query($sql);
-         print '<meta http-equiv="refresh" content="0;url=../index.php">';
+         echo "<script language='javascript'>alert('Cliente excluído com sucesso!');</script>
+         <meta http-equiv='refresh' content='0;url=../listar-cliente.php'>";
          break;
     };       

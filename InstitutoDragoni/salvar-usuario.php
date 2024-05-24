@@ -1,5 +1,5 @@
 <?php
-include '../controllers/conection.php';
+include 'controllers/conection.php';
 switch (@$_POST["acao"]) {
     case 'cadastrar';
         $login = $_POST['login'];
@@ -11,11 +11,11 @@ switch (@$_POST["acao"]) {
             $sql = "INSERT INTO usuarios (usuario, senha) VALUES ('$login', '$senha')";
             $result = $conn->query($sql);
             print "<script language='javascript'>alert('Usuário cadastrado com sucesso!');</script>
-         <meta http-equiv='refresh' content='0;url=../index.php'>";            
+         <meta http-equiv='refresh' content='0;url=index.php'>";            
         } else {
         
         echo "<script language='javascript'>alert('Usuário Já cadastrado');</script>
-        <meta http-equiv='refresh' content='0;url=../novo-usuario.php'>";
+        <meta http-equiv='refresh' content='0;url=novo-usuario.php'>";
         }
     break;
 
@@ -28,16 +28,15 @@ switch (@$_POST["acao"]) {
         
         if ($qtd > 0) {
             setcookie("login", $login);
-            header("Location: ../index.php");
+
+        session_start();
+		$_SESSION['login'] = $login;
+            header("Location: index.php");
            
         }
         else{
           
               print "<script language='javascript'>alert('Usuário e/ou senha incorreta!');</script>
-            "; 
-        }
-       
-        
-
-
-}
+              <meta http-equiv='refresh' content='0;url=login.php'>";        }
+        break;
+} 

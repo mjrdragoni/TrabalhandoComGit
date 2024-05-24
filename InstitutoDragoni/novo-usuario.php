@@ -1,5 +1,13 @@
 <?php
-include ("header.php");
+@session_start();
+
+if(isset($_SESSION['login']) ){
+include("header-restrita.php");				
+}		
+else{   
+include("header.php");	    		
+    } 	
+
 ?>
 <div class="container">
     <div class="row">
@@ -7,7 +15,7 @@ include ("header.php");
             <center>
                 <h1>Cadastrar novo usuário</h1>
             </center>
-            <form action="models/salvar-usuario.php" method="POST">
+            <form action="salvar-usuario.php" method="POST">
                 <input type="hidden" name="acao" value="cadastrar">
                 <div class="mb-3">
                     <label for="login">Login</label>

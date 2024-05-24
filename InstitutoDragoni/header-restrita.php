@@ -38,9 +38,9 @@ include ("controllers/conection.php");
             aria-haspopup="true" aria-expanded="false">
             Login
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="login.php">Efetuar Login</a>
-            <a class="dropdown-item" href="novo-cliente.php">Cadastrar usuário</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">           
+            <a class="dropdown-item" href="novo-usuario.php">Cadastrar usuário</a>
+            <a class="dropdown-item" href="<?php setcookie('login', '', -1); session_destroy();?>">Efetuar logout</a>
             <div class="dropdown-divider"></div>
           </div>
         </li>

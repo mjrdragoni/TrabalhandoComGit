@@ -1,5 +1,13 @@
 <?php
-include ("header.php");
+@session_start();
+
+if(isset($_SESSION['login']) ){
+include("header-restrita.php");				
+}		
+else{   
+include("header.php");	    		
+    } 	
+
 
 $sql = "SELECT * FROM produtos WHERE (codigo_produto ='$_REQUEST[id]')";
 $res = $conn->query($sql);

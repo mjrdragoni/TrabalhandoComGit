@@ -1,5 +1,7 @@
 <?php
-include ("header.php");
+
+include("header.php");	    		
+    
 
 $sql = "SELECT * FROM clientes WHERE (codigo_cliente ='$_REQUEST[id]')";
 $res = $conn->query($sql);
@@ -20,7 +22,7 @@ $row = $res->fetch_object();
                 </div>
                 <div class="mb-3">
                     <label for="endereco">Endereço</label>
-                    <input type="text" name="endereco" class="form-control" value='<?php print "$row->edereco"; ?>'>
+                    <input type="text" name="endereco" class="form-control" value='<?php print "$row->endereco"; ?>'>
                 </div>
                 <div class="mb-3">
                     <label for="email">E-mail</label>
@@ -37,26 +39,6 @@ $row = $res->fetch_object();
             </form>
         </div>
     </div>
-<<<<<<< HEAD
 </div>
 <?php include "footer.html"; ?>
 </div>
-=======
-    <div class="mb-3">
-        <label for="endereco">Endereço</label>
-        <input type="text" name="endereco" class="form-control" value='<?php print "$row->edereco"; ?>'>
-    </div>
-    <div class="mb-3">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" class="form-control" value='<?php print "$row->email"; ?>'>
-    </div>
-    <div class="mb-3">
-        <label for="telefone">Telefone</label>
-        <input type="text" name="telefone" class="form-control" value='<?php print "$row->telefone"; ?>'>
-    </div>
-    <div class="mb-3">
-        
-      <center>  <button type="submit" class="btn btn-primary">Salvar</button> </center>
-    </div>
-</form>
->>>>>>> 78f7fcf2e1369fef4f30d59949f04128c03861df

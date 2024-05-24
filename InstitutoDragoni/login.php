@@ -7,7 +7,7 @@ include ("header.php");
             <center>
                 <h1>Efetuar login</h1>
             </center>
-            <form action="models/salvar-usuario.php" method="POST">
+            <form action="salvar-usuario.php" method="POST">
                 <input type="hidden" name="acao" value="cadastrar">
                 <div class="mb-3">
                     <label for="login">Login</label>

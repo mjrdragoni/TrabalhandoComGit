@@ -36,17 +36,7 @@ include ("controllers/conection.php");
         <li class="nav-item">
           <a class="nav-link" href="login.php">Login</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="index.php" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Clientes
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="novo-cliente.php">Cadastrar Cliente</a>
-           
-            <div class="dropdown-divider"></div>
-          </div>
-        </li>
+       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="index.php" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
